@@ -1,11 +1,14 @@
-/*global module:true */
-function add(x,y){
-  if((typeof x ) === 'number' && (typeof y)==='number'){
-    return x+y;        
-  }
-  else
-    return NaN;
-}
+/* exported Rectangle */
+function Rectangle(width, height) {
+  var w = Number(width),
+      h = Number(height);
 
-module.exports = add;
+  this.area = function() {
+    return w * h;
+  };
+
+  this.perimeter = function() {
+    return 2 * (w + h);
+  };
+}
 
